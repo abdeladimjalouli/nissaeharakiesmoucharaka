@@ -17,6 +17,31 @@
             line-height: 1.7;
         }
 
+        /* LOGO BAR */
+        .logo-bar {
+            background: #ffffff;
+            padding: 15px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .logo-bar img {
+            height: 55px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            animation: floatIn 1.2s ease-in-out;
+        }
+
+        @keyframes floatIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* HEADER */
         header {
             background: linear-gradient(135deg, #2b7f9e, #5bb7c1);
             padding: 60px 20px;
@@ -24,26 +49,11 @@
             color: #fff;
         }
 
-        header h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
+        header h1 { font-size: 30px; margin-bottom: 15px; font-weight: 700; }
+        header h2 { font-size: 20px; opacity: 0.95; }
+        header h3 { font-size: 18px; opacity: 0.85; margin-top: 10px; }
 
-        header h2 {
-            font-size: 20px;
-            margin: 5px 0;
-            font-weight: 400;
-            opacity: 0.9;
-        }
-
-        header h3 {
-            font-size: 18px;
-            margin-top: 10px;
-            font-weight: 300;
-            opacity: 0.8;
-        }
-
+        /* BOXES */
         .container {
             max-width: 900px;
             margin: 40px auto;
@@ -56,6 +66,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             margin-bottom: 25px;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .box h3 {
@@ -64,19 +75,29 @@
             color: #2b7f9e;
         }
 
-        .cta-btn {
-            display: inline-block;
-            background: #2b7f9e;
-            color: #fff;
-            padding: 12px 25px;
+        /* FORM */
+        form input, form select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 15px 0;
+            border: 1px solid #ccc;
             border-radius: 8px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.3s;
-            margin-top: 10px;
+            font-family: inherit;
         }
 
-        .cta-btn:hover {
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #2b7f9e;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
             background: #226a82;
         }
 
@@ -86,37 +107,98 @@
             color: #777;
             font-size: 14px;
         }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- HERO SECTION -->
+    <!-- LOGO BAR -->
+    <div class="logo-bar">
+        <img src="logo caisse.png" alt="">
+        <img src="logonissae.png" alt="">
+        <img src="logocommunetetouan.png" alt="">
+        <img src="logoministereinter.png" alt="">
+    </div>
+
+    <!-- HERO TITLES -->
     <header>
         <h1>تمكين المرأة اقتصاديًا وبيئيًا وسياسيًا، رافعة لتعزيز المناصفة وتسريع وتيرة التنمية</h1>
         <h2>منظمة النساء الحركيات بإقليم تطوان</h2>
         <h3>بدعم من: صندوق الدعم المخصص لتشجيع تمثيلية النساء</h3>
     </header>
 
+    <!-- BANNER IMAGE -->
+    <div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <img src="banner.png" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.1);">
+    </div>
+
     <div class="container">
 
-        <!-- INTRO -->
+        <!-- INTRO SECTION -->
         <div class="box">
             <h3>مرحبا بكم في المنصة الرقمية الجديدة</h3>
             <p>
-                هذه الواجهة هي النسخة الأولية لمنصة 
-                <strong>النساء الحركيات للمشاركة</strong>، 
+                هذه الواجهة هي النسخة الأولية لمنصة <strong>النساء الحركيات للمشاركة</strong>، 
                 التي تهدف إلى تعزيز التمكين الاقتصادي والبيئي والسياسي للمرأة المغربية، وخاصة في الوسطين القروي والحضري.
             </p>
             <p>
-                المنصة الكاملة سيتم إطلاقها قريبًا، وستوفر فضاءً للتكوين، المشاركة، التفاعل، التسجيل في الأنشطة، والولوج إلى فرص الدعم والمواكبة.
+                المنصة الكاملة سيتم إطلاقها قريبًا، وستوفر فضاءً للتكوين، المشاركة، التفاعل، التسجيل في الأنشطة، 
+                والولوج إلى فرص الدعم والمواكبة.
             </p>
         </div>
 
-        <!-- COMING SOON -->
+        <!-- UNDER DEVELOPMENT -->
         <div class="box">
             <h3>المنصة في طور الإنجاز</h3>
             <p>
                 فريق العمل بصدد تطوير النسخة الكاملة للمنصة.  
                 ندعوكم للتسجيل من أجل التوصل بجميع المستجدات فور إطلاقها.
-            <
+            </p>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="box">
+            <h3>ما الذي ستقدمه المنصة؟</h3>
+            <ul style="padding-right:20px;">
+                <li>التسجيل في الأنشطة والدورات</li>
+                <li>الوصول إلى الموارد والوثائق</li>
+                <li>المشاركة في الاستشارات</li>
+                <li>التواصل مع فريق المشروع</li>
+            </ul>
+        </div>
+
+        <!-- FORM -->
+        <div class="box">
+            <h3>سجل معنا لتصلك جميع المستجدات</h3>
+
+            <form>
+                <label>الاسم الكامل</label>
+                <input type="text" placeholder="اكتب اسمك الكامل">
+
+                <label>رقم الهاتف</label>
+                <input type="text" placeholder="06XXXXXXXX">
+
+                <label>المدينة</label>
+                <input type="text" placeholder="اكتب اسم مدينتك">
+
+                <label>المهنة</label>
+                <input type="text" placeholder="ما هي مهنتك؟">
+
+                <button type="submit">إرسال</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        © جميع الحقوق محفوظة — منصة النساء الحركيات للمشاركة
+    </footer>
+
+</body>
+</html>
