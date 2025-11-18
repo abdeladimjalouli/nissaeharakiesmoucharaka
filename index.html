@@ -33,12 +33,11 @@
             height: 55px;
             object-fit: contain;
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-            animation: floatIn 1.2s ease-in-out;
         }
 
-        @keyframes floatIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         /* HEADER */
@@ -49,9 +48,9 @@
             color: #fff;
         }
 
-        header h1 { font-size: 30px; margin-bottom: 15px; font-weight: 700; }
-        header h2 { font-size: 20px; opacity: 0.95; }
-        header h3 { font-size: 18px; opacity: 0.85; margin-top: 10px; }
+        header h1 { font-size: 32px; margin-bottom: 20px; font-weight: 700; }
+        header h2 { font-size: 22px; opacity: 0.95; font-weight: 600; }
+        header h3 { font-size: 18px; opacity: 0.85; margin-top: 20px; }
 
         /* BOXES */
         .container {
@@ -66,7 +65,6 @@
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             margin-bottom: 25px;
-            animation: fadeIn 1s ease-in-out;
         }
 
         .box h3 {
@@ -108,10 +106,34 @@
             font-size: 14px;
         }
 
-        /* ANIMATIONS */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* WHATSAPP FLOAT */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            background: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            line-height: 60px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+            z-index: 999;
+            animation: floatUp 0.6s ease-out;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background: #1ebe5d;
+            transform: translateY(-4px);
+        }
+
+        @keyframes floatUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -121,16 +143,16 @@
     <!-- LOGO BAR -->
     <div class="logo-bar">
         <img src="logo caisse.png" alt="">
-        <img src="logonissae.png" alt="">
-        <img src="logocommunetetouan.png" alt="">
         <img src="logoministereinter.png" alt="">
+        <img src="logoprefe.png" alt="">
+        <img src="logonissae.png" alt="">
     </div>
 
     <!-- HERO TITLES -->
     <header>
-        <h1>تمكين المرأة اقتصاديًا وبيئيًا وسياسيًا، رافعة لتعزيز المناصفة وتسريع وتيرة التنمية</h1>
-        <h2>منظمة النساء الحركيات بإقليم تطوان</h2>
-        <h3>بدعم من: صندوق الدعم المخصص لتشجيع تمثيلية النساء</h3>
+        <h2>الكتابة الاقليمية لمنظمة النساء الحركيات  بإقليم تطوان</h2>
+        <h1>مشروع<br>تمكين المرأة اقتصاديًا وبيئيًا وسياسيًا، رافعة لتعزيز المناصفة وتسريع وتيرة التنمية</h1>
+        <h3>بدعم من: صندوق الدعم المخصص لتشجيع تمثيلية النساء التابع لوزارة الداخلية وبشراكة مع عمالة تطوان</h3>
     </header>
 
     <!-- BANNER IMAGE -->
@@ -144,12 +166,15 @@
         <div class="box">
             <h3>مرحبا بكم في المنصة الرقمية الجديدة</h3>
             <p>
-                هذه الواجهة هي النسخة الأولية لمنصة <strong>النساء الحركيات للمشاركة</strong>، 
-                التي تهدف إلى تعزيز التمكين الاقتصادي والبيئي والسياسي للمرأة المغربية، وخاصة في الوسطين القروي والحضري.
+                هذه الواجهة هي النسخة الأولية لمنصة رقمية <strong>للمشاركةالمدنية</strong>، 
+                 تهدف إلى تعزيز التمكين الاقتصادي والبيئي والسياسي للمرأة المغربية في الوسطين القروي والحضري.
             </p>
             <p>
-                المنصة الكاملة سيتم إطلاقها قريبًا، وستوفر فضاءً للتكوين، المشاركة، التفاعل، التسجيل في الأنشطة، 
-                والولوج إلى فرص الدعم والمواكبة.
+                المنصة الكاملة سيتم إطلاقها قريبًا، وستوفر فضاءً للتكوين، المشاركة،التسجيل في الأنشطة والدورات التكوينية،
+التعرف على فرص المشاركة السياسية،
+الانضمام إلى البرنامج الإرشادي والتواصل مع نساء قياديات،
+ومتابعة كل مستجدات المشروع لحظةً بلحظة
+.
             </p>
         </div>
 
@@ -168,8 +193,8 @@
             <ul style="padding-right:20px;">
                 <li>التسجيل في الأنشطة والدورات</li>
                 <li>الوصول إلى الموارد والوثائق</li>
-                <li>المشاركة في الاستشارات</li>
-                <li>التواصل مع فريق المشروع</li>
+                <li>استشارات</li>
+                <li>الاستفادة من تجارب رائدة</li>
             </ul>
         </div>
 
@@ -184,11 +209,18 @@
                 <label>رقم الهاتف</label>
                 <input type="text" placeholder="06XXXXXXXX">
 
-                <label>المدينة</label>
-                <input type="text" placeholder="اكتب اسم مدينتك">
+                <label>المدينة/الجماعة</label>
+                <input type="text" placeholder="اكتب المدينة أو الجماعة">
 
-                <label>المهنة</label>
-                <input type="text" placeholder="ما هي مهنتك؟">
+                <label>هل أنت؟</label>
+                <select>
+                    <option>فاعلة جمعوية</option>
+                    <option>فاعلة سياسية</option>
+                    <option>منتخبة</option>
+                    <option>مقاولة</option>
+                    <option>ممتلة تعاونية</option>
+                    <option>ممتلة منظمة شبابية</option>
+                </select>
 
                 <button type="submit">إرسال</button>
             </form>
@@ -199,6 +231,13 @@
     <footer>
         © جميع الحقوق محفوظة — منصة النساء الحركيات للمشاركة
     </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://chat.whatsapp.com/Lw4Cxtbw0EA0z7zVK2SVCW?mode=wwt" 
+       class="whatsapp-float" 
+       target="_blank">
+        💬
+    </a>
 
 </body>
 </html>
